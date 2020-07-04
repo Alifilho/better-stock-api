@@ -6,9 +6,9 @@ app = flask.Flask("Stocks API")
 app.config["DEBUG"] = True
 
 
-@app.route('/api/stock', methods=['GET'])
+@app.route('/api/stock', methods=['POST'])
 def home():
-    msft = yf.Ticker("AAPL")
+    msft = yf.Ticker("RRC")
     return jsonify(msft.info)
 
 
