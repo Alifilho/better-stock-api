@@ -8,7 +8,7 @@ app = flask.Flask("Stocks API")
 # app.config["DEBUG"] = True
 
 
-@app.route('/api/stock', methods=['GET'])
+@app.route('/api/stock', methods=['POST'])
 def home():
     stocks = list()
     best_stocks = analysis()
